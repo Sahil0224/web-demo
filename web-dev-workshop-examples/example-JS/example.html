@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Example Page</title>
+
+    <meta charset="UTF-8">
+
+    <script type="application/javascript">
+      function sayHello() {
+        alert('Hello World - Internal');
+      }
+
+    let count = 0;
+    let timer = null;
+
+      function incrementCount() {
+        count += 1
+        document.getElementById('counter').innerHTML = count;
+      }
+
+      function startCounting() {
+        if (!timer)
+        timer = setInterval(incrementCount, 1000); // 1 second = 1000 milliseconds
+      }
+
+      function stopCounting() {
+        if(timer)
+        {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function resetCount() {
+        count = 0;
+        document.getElementById('counter').innerHTML = count;
+      }
+
+      async function populateMerchantData() {
+        try {
+
+          document.getElementById('data-payload').innerHTML = 'Loading Merchant Data...'
+
+          const data = await fetch('https://dev1.dev.clover.com/oloservice/v1/merchants/R9AHC6Q4K7PX1', {
+            method: 'GET',
+            mode: 'cors'
+          }).then(res => res.json());
+
+          document.getElementById('data-payload').innerHTML = JSON.stringify(data, null, 2);
+        } catch (e) {
+          console.log('Something went wrong :(', e);
+        }
+      }
+
+      async function populateMenuData() {
+
+document.getElementById('menu-items').innerHTML = 'Loading Menu Data...';
+
+const data = await fetch('https://dev1.dev.clover.com/oloservice/v1/merchants/R9AHC6Q4K7PX1/menu', {
+  method: 'GET',
+  mode: 'cors'
+}).then(res => res.json());
+
+const items = data.items.map(item => {
+  return `
+    <div class="item">
+      <p>${item.name} - $${(item.price / 100).toFixed(2)}</p>
+    </div>
+  `
+});
+
+document.getElementById('menu-items').innerHTML = items.join(' <br> ');
+}
+    </script>
+
+    <script src="../example-JS\js\external.js"></script>
+
+  </head>
+
+  <body>
+
+    <button id="example1" onclick="alert('Hello World - Inline')">Hello - Inline</button>
+    <br>
+    <button id="example2" onclick="sayHello()">Hello - Internal</button>
+    <br>
+    <button id="example3">Hello External</button>
+
+    <br>
+    <br>
+
+    <div id="counter">0</div>
+    <button onclick="startCounting()">Start Counter</button>
+    <button onclick="stopCounting()">Stop Counter</button>
+    <button onclick="incrementCount()">Increment</button>
+    <button onclick="resetCount()">Reset</button>
+
+    <br>
+    <br>
+
+    <button id="generate-menu" onclick="populateMerchantData()">Get Merchant Data</button>
+
+    <h1 id="main-heading">Merchant Data</h1>
+
+    <main>
+      <pre id="data-payload"></pre>
+    </main>
+
+    <br>
+    <br>
+
+    <button onclick="populateMenuData()">Get Menu Items</button>
+
+    <h2>Menu Items</h2>
+
+    <div id="menu-items">
+
+    </div>
+  </body>
+
+</html>

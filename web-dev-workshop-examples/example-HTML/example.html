@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- ^^^ All HTML documents MUST start with this declaration. It tells the browser what document to expect. -->
+
+<html lang="en">
+  <head>
+    <title>Example Page</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+    <style>
+      body {
+
+      }
+    </style>
+
+  </head>
+
+  <!-- Comments Can Be Added Like this -->
+  <body>
+    <h1>Example Heading</h1>
+
+    <p>This is a paragraph - it is common to use "lorem ipsem" as placeholder text</p>
+
+    <!-- Note: Line breaks in HTML do not actually create line breaks in the document (use the <br> tag) -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!-- Horizontal Rule (simple line) -->
+    <hr>
+
+    <a href="https://google.com" target="_blank">I'm a link to Google (new tab)</a>
+
+    <br>
+    <br>
+    <a href="https://google.com">I'm a link to Google (use this tab)</a>
+
+    <!-- Explicitly Forced Line Break  -->
+    <br>
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Banana</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Mango</li>
+      <li>Peach</li>
+      <li>Plumb</li>
+    </ol>
+
+    <h2>Table without Header</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <h2>Table with Header</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Head A</th>
+          <th>Head B</th>
+          <th>Head C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <button popovertarget="mypopover">Toggle Popover</button>
+
+    <div id="mypopover" popover>Yo Yo, I'm a popup!</div>
+
+    <br>
+    <br>
+
+    <label>
+      <input id="test-input" type="text" placeholder="Enter Some Text" />
+    </label>
+    <button onclick="alert(document.getElementById('test-input').value)">Click Me</button>
+
+  </body>
+</html>

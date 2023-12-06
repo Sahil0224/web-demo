@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>CSS Examples</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="./img/favicon.ico">
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        height: 60px;
+        background-color: #280;
+        box-shadow: 0 0 5px gray;
+      }
+
+      header img {
+      margin: 15px;
+      }
+
+      main {
+        font-family: Verdana, sans-serif;
+        width: 800px;
+        margin: auto;
+        padding: 0 15px 30px;
+      }
+
+      #menu-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 30px;
+      }
+
+      #menu-content > .item-details {
+        display: flex;
+        justify-content: space-between;
+        width: 380px;
+        box-shadow: 0 0 3px gray;
+        border-radius: 5px;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+
+      #menu-content > .item-details:hover {
+        transform: scale(1.05);
+      }
+
+
+      .item-details > img {
+        height: 75px;
+      }
+
+      .item-details > p {
+        font-weight: bold;
+
+      }
+
+      .item-details > p:first-child {
+        font-size: 18px;
+        margin: 0 20px;
+      }
+
+      @media screen and (max-width: 820px){
+        main {
+          width: 400px;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <img alt="clover" src="../example-CSS/img/clover-logo.svg" />
+    </header>
+
+    <main>
+      <h1>Menu</h1>
+
+      <section id="menu-content">
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>French Fries</p>
+          <p>$5.99</p>
+          <img alt="French Fries" src="../example-CSS\img\french-fries.webp" />
+        </div>
+        <div class="item-details">
+          <p>Cheeseburger</p>
+          <p>$5.99</p>
+          <img alt="Cheeseburger" src="../example-CSS\img\cheeseburger.jpeg" />
+        </div>
+        <div class="item-details">
+          <p>Coca Cola</p>
+          <p>$5.99</p>
+          <img alt="Coca Cola" src="../example-CSS\img\coca-cola.jpeg" />
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
